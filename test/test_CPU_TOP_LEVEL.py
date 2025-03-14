@@ -930,7 +930,144 @@ async def tb_CPU_TOP_LEVEL_SW(dut: CPU_TOP_LEVEL, trace: lib.Waveform):
     trace.set_scale(2)
 
     async for index, address in program.attach_device(trace, dut.address_program, dut.data_program):
+                # Print each step in the pipeline
+        print(f"Clock {index}:")
+        print(f"  Fetch Stage: Instruction = {dut.instruction_fetch.program_counter.destination}")
+        print(f"  Decode Stage: Data Destination = {dut.instruction_decode.data_destination}")
+
+        print(f"  Memory Stage: Memory Address = {dut.memory_access}")
+        print(f"  Write-Back Stage: WB Data = {dut.stage_wb_data_destination}")
+        print(f"  Branch Forwarding Unit: {dut.branch_forwarding_unit}")
+        print(f"  Execution Forwarding Unit: {dut.execution_forwarding_unit}")
+        print(f"  Control Hazard Unit: {dut.control_hazzard_unit}")
+        print(f"  Expected: {values_destination[index]}, got: {dut.stage_wb_data_destination}")
         yield trace.check(dut.stage_wb_data_destination, values_destination[index], f"At clock {index} (PC = {address}).")
+
+
+@CPU_TOP_LEVEL.testcase
+async def tb_CPU_TOP_LEVEL_HAZARD_STALL(dut: CPU_TOP_LEVEL, trace: lib.Waveform):
+    program = lib.Program("../data/assembly/testcase_HAZARD_STALL.S", stepping=True)
+    values_destination = [
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000010",  # Execução correta após stall
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",  # Execução correta após stall
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000", 
+        "00000000000000000000000000000000",  # Execução correta após stall
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",   
+        "00000000000000000000000000000000",  # Execução correta após stall
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000", 
+        "00000000000000000000000000000000",  # Execução correta após stall
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000", 
+    ]
+    program.attach_memory(dut.memory_read, dut.memory_write, dut.address_memory, dut.data_memory_out, dut.data_memory_in)
+
+    trace.set_scale(2)
+
+    async for index, address in program.attach_device(trace, dut.address_program, dut.data_program):
+        # if index >= len(values_destination):
+        #     break
+
+        # Print each step in the pipeline
+        print(f"Clock {index}:")
+        print(f"  Fetch Stage: PC = {dut.instruction_fetch.program_counter.destination}")
+        print (f"  Fetch Stage: Instruction = {dut.instruction_fetch.address_program}")
+
+        print(f"  Decode Stage: ULA Data 1= {dut.execute.module_execution_unit.source_1}")
+        print(f"  Decode Stage: ULA Data 2= {dut.execute.module_execution_unit.source_2}")
+        print(f"  Decode Stage: Data Imediate = {dut.execute.module_execution_unit.immediate}")
+        print(f"  Decode Stage: Data Destination = {dut.execute.module_execution_unit.destination}")
+
+        print(f"  Memory Stage: Memory Address = {dut.memory_access}")
+        print(f"  Write-Back Stage: WB Data = {dut.stage_wb_data_destination}")
+        print(f"  Branch Forwarding Unit: {dut.branch_forwarding_unit}")
+        print(f"  Execution Forwarding Unit: {dut.execution_forwarding_unit}")
+        print(f"  Control Hazard Unit: {dut.control_hazzard_unit}")
+        print(f"  Expected: {values_destination[index]}, got: {dut.stage_wb_data_destination}")
+
+        yield trace.check(dut.stage_wb_data_destination, values_destination[index], f"At clock {index} (PC = {address}).")
+    
+@CPU_TOP_LEVEL.testcase
+async def tb_CPU_TOP_LEVEL_HAZARD_FORWARDING(dut: CPU_TOP_LEVEL, trace: lib.Waveform):
+    program = lib.Program("../data/assembly/testcase_HAZARD_FORWARDING.S", stepping=True)
+    values_destination = [
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000011",
+        "00000000000000000000000000000110",
+        "00000000000000000000000000001001",
+        "00000000000000000000000000001111",
+        "00000000000000000000000000001001",
+        "00000000000000000000000000001111",
+        "00000000000000000000000000001001",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000001100" ,
+        "00000000000000000000000000001100",
+        "00000000000000000000000000000011",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000" ,
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000"  
+          
+
+    ]
+    program.attach_memory(dut.memory_read, dut.memory_write, dut.address_memory, dut.data_memory_out, dut.data_memory_in)
+
+    trace.set_scale(2)
+
+    async for index, address in program.attach_device(trace, dut.address_program, dut.data_program):
+        # if index >= len(values_destination):
+        #     break
+
+        # Print each step in the pipeline
+        print(f"Clock {index}:")
+        print(f"  Fetch Stage: PC = {dut.instruction_fetch.program_counter.destination}")
+
+        print(f"  Decode Stage: ULA Data 1= {dut.execute.module_execution_unit.source_1}")
+        print(f"  Decode Stage: ULA Data 2= {dut.execute.module_execution_unit.source_2}")
+        print(f"  Decode Stage: Data Imediate = {dut.execute.module_execution_unit.immediate}")
+        print(f"  Decode Stage: Data Destination = {dut.execute.module_execution_unit.destination}")
+
+        print(f"  Memory Stage: Memory Address = {dut.memory_access}")
+        print(f"  Write-Back Stage: WB Data = {dut.stage_wb_data_destination}")
+        print(f"  Branch Forwarding Unit: {dut.branch_forwarding_unit}")
+        print(f"  Execution Forwarding Unit: {dut.execution_forwarding_unit}")
+        print(f"  Control Hazard Unit: {dut.control_hazzard_unit}")
+        print(f"  Expected: {values_destination[index]}, got: {dut.stage_wb_data_destination}")
+
+        yield trace.check(dut.stage_wb_data_destination, values_destination[index], f"At clock {index} (PC = {address}).")
+
+@pytest.mark.testcases
+def test_CPU_TOP_LEVEL_hazard_testcases():
+    CPU_TOP_LEVEL.test_with(tb_CPU_TOP_LEVEL_HAZARD_FORWARDING)
+    CPU_TOP_LEVEL.test_with(tb_CPU_TOP_LEVEL_HAZARD_STALL)
+
+@pytest.mark.testcases
+def test_CPU_TOP_LEVEL_hazard_fowarding_testcases():
+    CPU_TOP_LEVEL.test_with(tb_CPU_TOP_LEVEL_HAZARD_FORWARDING)
+
+@pytest.mark.testcases
+def test_CPU_TOP_LEVEL_hazard_stall_testcases():
+    CPU_TOP_LEVEL.test_with(tb_CPU_TOP_LEVEL_HAZARD_STALL)
 
 @pytest.mark.synthesis
 def test_CPU_TOP_LEVEL_synthesis():
