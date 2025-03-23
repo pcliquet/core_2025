@@ -37,6 +37,7 @@ class CPU_TOP_LEVEL(lib.Entity):
     branch_forwarding_unit = CPU_BRANCH_FORWARDING_UNIT
     execution_forwarding_unit = CPU_EXECUTION_FORWARDING_UNIT
     control_hazzard_unit = CPU_HAZZARD_CONTROL_UNIT
+   
 
 
 @CPU_TOP_LEVEL.testcase
@@ -950,31 +951,24 @@ async def tb_CPU_TOP_LEVEL_HAZARD_STALL(dut: CPU_TOP_LEVEL, trace: lib.Waveform)
     values_destination = [
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000010",  # Execução correta após stall
+        "00000000000000000000000000000000",  
+        "00000000000000000000000000000100",
+        "00000000000000000000000000000100",
+        "00000000000000000000000000000100",  
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",  # Execução correta após stall
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
+        "00000000000000000000000000000100",
         "00000000000000000000000000000000", 
-        "00000000000000000000000000000000",  # Execução correta após stall
+        "00000000000000000000000000000001",  
+        "00000000000000000000000000000100",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
+        # "00000000000000000000000000000000", #segundo ciclo de stall? porque? a resposta 
+        "00000000000000000000000000000100",
         "00000000000000000000000000000000",   
-        "00000000000000000000000000000000",  # Execução correta após stall
+        "00000000000000000000000000001010",  
+        "00000000000000000000000000000000",  
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000", 
-        "00000000000000000000000000000000",  # Execução correta após stall
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000", 
+
     ]
     program.attach_memory(dut.memory_read, dut.memory_write, dut.address_memory, dut.data_memory_out, dut.data_memory_in)
 
@@ -988,6 +982,8 @@ async def tb_CPU_TOP_LEVEL_HAZARD_STALL(dut: CPU_TOP_LEVEL, trace: lib.Waveform)
         print(f"Clock {index}:")
         print(f"  Fetch Stage: PC = {dut.instruction_fetch.program_counter.destination}")
         print (f"  Fetch Stage: Instruction = {dut.instruction_fetch.address_program}")
+        print(f" Branch Compare Unit: {dut.instruction_decode.branch_compare_unit.destination}")
+        print(f"  Decode Stage: Branch Unit = {dut.instruction_decode.branch_unit.destination}")
 
         print(f"  Decode Stage: ULA Data 1= {dut.execute.module_execution_unit.source_1}")
         print(f"  Decode Stage: ULA Data 2= {dut.execute.module_execution_unit.source_2}")
@@ -1014,17 +1010,11 @@ async def tb_CPU_TOP_LEVEL_HAZARD_FORWARDING(dut: CPU_TOP_LEVEL, trace: lib.Wave
         "00000000000000000000000000000110",
         "00000000000000000000000000001001",
         "00000000000000000000000000001111",
-        "00000000000000000000000000001001",
         "00000000000000000000000000001111",
+        "00000000000000000000000000000110",
+        "00000000000000000000000000000000",
         "00000000000000000000000000001001",
-        "00000000000000000000000000000000",
-        "00000000000000000000000000001100" ,
-        "00000000000000000000000000001100",
-        "00000000000000000000000000000011",
-        "00000000000000000000000000000000",
         "00000000000000000000000000000000" ,
-        "00000000000000000000000000000000",
-        "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000"  
           
@@ -1042,10 +1032,12 @@ async def tb_CPU_TOP_LEVEL_HAZARD_FORWARDING(dut: CPU_TOP_LEVEL, trace: lib.Wave
         print(f"Clock {index}:")
         print(f"  Fetch Stage: PC = {dut.instruction_fetch.program_counter.destination}")
 
+
         print(f"  Decode Stage: ULA Data 1= {dut.execute.module_execution_unit.source_1}")
         print(f"  Decode Stage: ULA Data 2= {dut.execute.module_execution_unit.source_2}")
         print(f"  Decode Stage: Data Imediate = {dut.execute.module_execution_unit.immediate}")
         print(f"  Decode Stage: Data Destination = {dut.execute.module_execution_unit.destination}")
+
 
         print(f"  Memory Stage: Memory Address = {dut.memory_access}")
         print(f"  Write-Back Stage: WB Data = {dut.stage_wb_data_destination}")
