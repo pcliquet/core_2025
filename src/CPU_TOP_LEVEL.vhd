@@ -62,7 +62,7 @@ begin
         port map (
             clock           => clock,
             clear           => clear,
-            enable          => NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall)),
+            enable          => NOT (flag_hazzard),  --it was NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall))
             source          => control_if,
             address_jump    => stage_id_address_jump,
             address_program => signals_if_id.address_program
