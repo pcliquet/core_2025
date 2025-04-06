@@ -6,7 +6,7 @@ entity MODULE_BTB is
     Generic (
         NUM_SLOTS   : integer := 16;  -- Number of entries in the BTB
         ADDR_WIDTH : integer := 32 ;  -- Width of addresses
-        TAG_WIDTH  : integer :=  ADDR_WIDTH - 4 - 2   -- Width of the tag minus index and offset
+        TAG_WIDTH      : integer := 26  -- definido diretamente, já calculado como 32 - 4 - 2
 
     );
     Port (
