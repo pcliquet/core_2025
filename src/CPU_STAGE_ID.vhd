@@ -20,6 +20,7 @@ entity CPU_STAGE_ID is
         data_destination      : in  WORK.CPU.t_DATA;
         forward               : in  WORK.CPU.t_FORWARD_BRANCH;
         source                : in  WORK.CPU.t_SIGNALS_IF_ID;
+		  adress_for_btb        : in WORK.CPU.t_DATA;
         address_jump          : out WORK.CPU.t_DATA;
         control_if            : out WORK.CPU.t_CONTROL_IF;
         signals_ex            : out WORK.CPU.t_SIGNALS_ID_EX
@@ -36,8 +37,14 @@ architecture RV32I of CPU_STAGE_ID is
     signal data_source_2       : WORK.CPU.t_DATA;
     signal data_immediate      : WORK.CPU.t_DATA;
 	signal address_out         : WORK.CPU.t_DATA;
+    signal address_btb        : WORK.CPU.t_DATA;
+    signal address_branch_comp : WORK.CPU.t_DATA;
     signal enable_flush        : std_logic;
     signal enable_branch       : std_logic;
+    signal hit              : std_logic;
+    signal take_branch        : std_logic;
+    signal signal_was_taken    : std_logic := '0';
+	 signal resetbtb : std_logic := '1';
 
 begin
 
@@ -61,7 +68,7 @@ begin
     enable_flush <= control_id.enable_jump OR enable_branch;
 
     control_if.enable_stall  <= control_id.enable_branch or control_id.enable_jalr;
-    control_if.select_source <= control_id.enable_jump OR enable_branch;
+    control_if.select_source <= (control_id.enable_jump OR enable_branch)  or (hit and take_branch and hit and (signal_was_taken XNOR enable_branch));
 
     signals_ex.address_program <= source_0.address_program;
     signals_ex.data_source_1   <= data_source_1;
@@ -111,10 +118,15 @@ begin
             if (rising_edge(clock)) then
                 if (enable = '1') then
 						address_out <= source_0.address_program;
+						signal_was_taken <= take_branch and hit;
+						resetbtb <= '0';
+
                 end if;
             end if;
         end process;
     else generate
+			resetbtb <= '0';
+
          address_out <= source_0.address_program;
     end generate;
 
@@ -124,8 +136,9 @@ begin
             source_program   => address_out,
             source_immediate => data_immediate,
             source_register  => forward_source_1,
-            destination      => address_jump
+            destination      => address_branch_comp
         );
+        address_jump<=  address_btb when (hit = '1' and take_branch ='1' and (signal_was_taken = enable_branch)) else address_branch_comp;
 
     BRANCH_COMPARE_UNIT: entity WORK.MODULE_BRANCH_COMPARE_UNIT(RV32I)
         port map (
@@ -136,6 +149,23 @@ begin
             forward            => forward,
             data_source_1      => forward_source_1,
             destination        => enable_branch
+        );
+
+    BTB : entity WORK.MODULE_BTB(RV32I)
+        port map (
+            clock            => clock,
+            rst              => resetbtb,
+            pc_lookup        => adress_for_btb,
+            pc_update        => address_out,
+            write_en         => control_id.enable_branch,
+            branch_taken     => control_id.enable_jump OR enable_branch,
+            target_addr_in   => address_branch_comp,
+            target_addr_out  => address_btb,
+            hit              => hit,
+            take_branch      => take_branch,
+            tag_out          => open,
+            count_out        => open,
+            index_out        => open
         );
 
 end architecture;

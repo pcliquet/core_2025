@@ -16,7 +16,8 @@ entity MODULE_PROGRAM_COUNTER is
         enable       : in  std_logic;
         selector     : in  std_logic;
         source       : in  std_logic_vector((DATA_WIDTH - 1) downto 0);
-        destination  : out std_logic_vector((DATA_WIDTH - 1) downto 0)
+        destination  : out std_logic_vector((DATA_WIDTH - 1) downto 0);
+		  pc_address : out std_logic_vector((DATA_WIDTH - 1) downto 0)
     );
 
 end entity;
@@ -30,7 +31,7 @@ architecture RV32I of MODULE_PROGRAM_COUNTER is
 begin
 
     destination <= count_current;
-
+	 pc_address<= count_source;
     MUX_SOURCE : entity WORK.GENERIC_MUX_2X1
         generic map (
             DATA_WIDTH => WORK.RV32I.XLEN

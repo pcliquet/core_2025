@@ -91,12 +91,17 @@ async def tb_btb_write_and_hit(dut: MODULE_BTB, trace: lib.Waveform):
     dut.target_addr_in.value = BinaryValue(target)
     dut.write_en.value = BinaryValue("1")
     await trace.cycle()
+    dut.pc_update.value = BinaryValue("00000000000000000000000000000000")
+    dut.pc_lookup.value = BinaryValue(pc)
+
     dut.write_en.value = BinaryValue("0")
     await trace.cycle()
 
     # Hit expected
-    dut.pc_lookup.value = BinaryValue(pc)
+    dut.pc_lookup.value = BinaryValue("00000000000000000000000000000000")
+
     await trace.cycle()
+
     yield trace.check(dut.hit, "1")
     yield trace.check(dut.target_addr_out, target)
 

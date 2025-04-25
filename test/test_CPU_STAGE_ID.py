@@ -6,6 +6,7 @@ from test_MODULE_REGISTER_FILE import MODULE_REGISTER_FILE
 from test_MODULE_CONTROL_UNIT import MODULE_CONTROL_UNIT
 from test_MODULE_BRANCH_COMPARE_UNIT import MODULE_BRANCH_COMPARE_UNIT
 from test_MODULE_BRANCH_UNIT import MODULE_BRANCH_UNIT
+from test_MODULE_BTB import MODULE_BTB
 
 
 class CPU_STAGE_ID(lib.Entity):
@@ -27,6 +28,7 @@ class CPU_STAGE_ID(lib.Entity):
     module_register_file = MODULE_REGISTER_FILE
     branch_unit = MODULE_BRANCH_UNIT
     branch_compare_unit = MODULE_BRANCH_COMPARE_UNIT
+    btb = MODULE_BTB
 
 
 @pytest.mark.synthesis

@@ -12,7 +12,8 @@ entity CPU_STAGE_IF is
         enable          : in  std_logic;
         source          : in  WORK.CPU.t_CONTROL_IF;
         address_jump    : in  WORK.CPU.t_DATA;
-        address_program : out WORK.CPU.t_DATA
+        address_program : out WORK.CPU.t_DATA;
+		  pc_address : out WORK.CPU.t_DATA
     );
 
 end entity;
@@ -30,7 +31,8 @@ begin
             enable       => enable, -- AND NOT(source.enable_stall),
             selector     => source.select_source,
             source       => address_jump,
-            destination  => address_program
+            destination  => address_program,
+				pc_address    =>pc_address
         );
 
 end architecture;

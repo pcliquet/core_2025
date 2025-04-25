@@ -1003,30 +1003,40 @@ async def tb_CPU_TOP_LEVEL_HAZARD_STALL(dut: CPU_TOP_LEVEL, trace: lib.Waveform)
         print(f"Clock {index}:")
         print(f"  Fetch Stage: PC = {dut.instruction_fetch.program_counter.destination}")
         print (f"  Fetch Stage: AdressJump = {dut.instruction_fetch.address_jump}")
-        print(f"  Fetch Stage: Enable = {dut.instruction_fetch.enable}")
-        print(f"  Fetch Stage: MSource1 = {dut.instruction_fetch.program_counter.mux_source.source_1}")
-        print(f"  Fetch Stage: MSource2 = {dut.instruction_fetch.program_counter.mux_source.source_2}")
-        print(f"  Fetch Stage: MSelector = {dut.instruction_fetch.program_counter.mux_source.selector}")
-        print(f"  Fetch Stage: Mdestination = {dut.instruction_fetch.program_counter.mux_source.destination}")
+
+
+        print(f"  Decode Stage: BTB hit = {dut.instruction_decode.btb.hit}")
+        print(f"  Decode Stage: BTB take branch= {dut.instruction_decode.btb.take_branch}")
+
+        print(f"  Decode Stage: BTB pclookup = {dut.instruction_decode.btb.pc_lookup}")
+        print(f"  Decode Stage: BTB pcupdate = {dut.instruction_decode.btb.pc_update}")
+        print(f"  Decode Stage: BTB pcwrite = {dut.instruction_decode.btb.write_en}")
+        print(f"  Decode Stage: BTB rst = {dut.instruction_decode.btb.rst}")
+        print(f"  Decode Stage: BTB branch_taken = {dut.instruction_decode.btb.branch_taken}")
+
+
+        print(f"  Decode Stage: BTB targetout = {dut.instruction_decode.btb.target_addr_out}")
+        print(f"  Decode Stage: BTB target in = {dut.instruction_decode.btb.target_addr_in}")
+
+
+        print(f"  Decode Stage: BTB index_out in = {dut.instruction_decode.btb.index_out}")
 
 
 
 
-        print(f" Branch Compare Unit: {dut.instruction_decode.branch_compare_unit.destination}")
+
+
+
+
+        print(f"  Decode Stage: Branch Compare Unit = {dut.instruction_decode.branch_compare_unit.destination}")
+        print(f"  Decode Stage: Branch Compare Unit S1 = {dut.instruction_decode.branch_compare_unit.data_source_1}")
+        print(f"  Decode Stage: Branch Compare Unit S2 = {dut.instruction_decode.branch_compare_unit.source_2}")
+
         print(f"  Decode Stage: Branch Unit = {dut.instruction_decode.branch_unit.destination}")
-        print(f"  Decode Stage: ENABLE = {dut.instruction_decode.enable}")
         print(f"  Decode Stage: Data source 1 = {dut.instruction_decode.module_register_file.data_source_1}")
 
-        print(f"  EXEC Stage: ULA Data 1= {dut.execute.module_execution_unit.source_1}")
-        print(f"  EXEC Stage: ULA Data 2= {dut.execute.module_execution_unit.source_2}")
-        print(f"  EXEC Stage: Data Imediate = {dut.execute.module_execution_unit.immediate}")
-        print(f"  EXEC Stage: Data Destination = {dut.execute.module_execution_unit.destination}")
 
-        print(f"  Memory Stage: Memory Address = {dut.memory_access}")
-        print(f"  Write-Back Stage: WB Data = {dut.stage_wb_data_destination}")
-        print(f"  Branch Forwarding Unit: {dut.branch_forwarding_unit}")
-        print(f"  Execution Forwarding Unit: {dut.execution_forwarding_unit}")
-        print(f"  Control Hazard Unit: {dut.control_hazzard_unit}")
+       
         print(f"  Expected: {values_destination[index]}, got: {dut.stage_wb_data_destination}")
 
         yield trace.check(dut.stage_wb_data_destination, values_destination[index], f"At clock {index} (PC = {address}).")

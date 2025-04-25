@@ -41,6 +41,7 @@ architecture RV32I of CPU_TOP_LEVEL is
     signal stage_wb_enable_destination : std_logic;
     signal stage_wb_select_destination : WORK.RV32I.t_REGISTER;
     signal stage_wb_data_destination   : WORK.RV32I.t_DATA;
+	 signal pc_address :                  WORK.RV32I.t_DATA;
     signal flag_stall                  : std_logic;
     signal flag_hazzard                : std_logic;
 
@@ -65,7 +66,8 @@ begin
             enable          => NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall)),  --it was NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall))
             source          => control_if,
             address_jump    => stage_id_address_jump,
-            address_program => signals_if_id.address_program
+            address_program => signals_if_id.address_program,
+				pc_address => pc_address
         );
 
     INSTRUCTION_DECODE : entity WORK.CPU_STAGE_ID(RV32I)
@@ -81,6 +83,7 @@ begin
             data_destination     => stage_wb_data_destination,
             forward              => stage_id_forward_branch,
             source               => signals_if_id,
+				adress_for_btb       => pc_address,
             address_jump         => stage_id_address_jump,
             control_if           => control_if,
             signals_ex           => signals_id_ex
