@@ -76,7 +76,7 @@ begin
         )
         port map (
             clock                => clock,
-            clear                => NOT flag_stall,
+            clear                => NOT flag_stall OR NOT control_if.enable_stall,
             enable               => NOT (flag_hazzard OR (flag_stall AND control_if.enable_stall)),
             enable_destination   => stage_wb_enable_destination,
             select_destination   => stage_wb_select_destination,

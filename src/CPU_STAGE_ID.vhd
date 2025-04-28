@@ -45,6 +45,7 @@ architecture RV32I of CPU_STAGE_ID is
     signal take_branch        : std_logic;
     signal signal_was_taken    : std_logic := '0';
 	 signal resetbtb : std_logic := '1';
+    signal count_increment : WORK.RV32I.t_DATA;
 
 begin
 
@@ -53,6 +54,8 @@ begin
         begin
             if (rising_edge(clock)) then
                 if (enable = '1') then
+							signal_was_taken <= take_branch and hit;
+
                     if ((clear AND enable_flush) = '1') then
                         source_0 <= WORK.CPU.NULL_SIGNALS_IF_ID;
                     else
@@ -65,10 +68,10 @@ begin
         source_0 <= source;
     end generate;
 
-    enable_flush <= (control_id.enable_jump OR enable_branch) XOR(signal_was_taken);
+    enable_flush <= (control_id.enable_jump OR enable_branch) XOR (signal_was_taken);
 
-    control_if.enable_stall  <= (control_id.enable_branch  XOR(signal_was_taken)) or control_id.enable_jalr;
-    control_if.select_source <= (control_id.enable_jump OR enable_branch)  or (hit and take_branch and hit and (signal_was_taken XNOR enable_branch));
+    control_if.enable_stall  <= (control_id.enable_branch  XOR (signal_was_taken)) or control_id.enable_jalr;
+    control_if.select_source <= enable_flush or (hit and take_branch);
 
     signals_ex.address_program <= source_0.address_program;
     signals_ex.data_source_1   <= data_source_1;
@@ -118,7 +121,6 @@ begin
             if (rising_edge(clock)) then
                 if (enable = '1') then
 						address_out <= source_0.address_program;
-						signal_was_taken <= take_branch and hit;
 						resetbtb <= '0';
 
                 end if;
@@ -138,7 +140,21 @@ begin
             source_register  => forward_source_1,
             destination      => address_branch_comp
         );
-        address_jump<=  address_btb when (hit = '1' and take_branch ='1') else address_branch_comp;
+		  
+		  
+		  COUNT_ADDER : entity WORK.GENERIC_ADDER
+        generic map (
+            DATA_WIDTH       => WORK.RV32I.XLEN,
+            DEFAULT_SOURCE_2 => 4
+        )
+        port map (
+            source_1    => address_out,
+            destination => count_increment
+        );
+
+        address_jump<=  address_btb when (hit = '1' and take_branch ='1') else
+								count_increment when (signal_was_taken = '1' and ((control_id.enable_jump OR enable_branch) ='0'))
+								else address_branch_comp;
 
     BRANCH_COMPARE_UNIT: entity WORK.MODULE_BRANCH_COMPARE_UNIT(RV32I)
         port map (
