@@ -65,9 +65,9 @@ begin
         source_0 <= source;
     end generate;
 
-    enable_flush <= control_id.enable_jump OR enable_branch;
+    enable_flush <= (control_id.enable_jump OR enable_branch) XOR(signal_was_taken);
 
-    control_if.enable_stall  <= control_id.enable_branch or control_id.enable_jalr;
+    control_if.enable_stall  <= (control_id.enable_branch  XOR(signal_was_taken)) or control_id.enable_jalr;
     control_if.select_source <= (control_id.enable_jump OR enable_branch)  or (hit and take_branch and hit and (signal_was_taken XNOR enable_branch));
 
     signals_ex.address_program <= source_0.address_program;
@@ -138,7 +138,7 @@ begin
             source_register  => forward_source_1,
             destination      => address_branch_comp
         );
-        address_jump<=  address_btb when (hit = '1' and take_branch ='1' and (signal_was_taken = enable_branch)) else address_branch_comp;
+        address_jump<=  address_btb when (hit = '1' and take_branch ='1') else address_branch_comp;
 
     BRANCH_COMPARE_UNIT: entity WORK.MODULE_BRANCH_COMPARE_UNIT(RV32I)
         port map (
