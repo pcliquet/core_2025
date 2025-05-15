@@ -153,6 +153,8 @@ class Program:
         process = subprocess.Popen(
             [
                 "riscv32-unknown-elf-gcc",
+                "-march=rv32i",       
+                "-mabi=ilp32",           
                 "-T",
                 f"{lib.WORKSPACE_FOLDER}/data/gcc/linker.ld",
                 "-c",
@@ -206,6 +208,62 @@ class Program:
 
         assert process.returncode == 0, outs.decode()
         return output
+
+
+    @staticmethod
+    def _run_C(c_file: Path):
+        # Primeiro, compilar o código C para gerar o arquivo .s
+        asm_output = c_file.with_suffix(".s")
+        subprocess.run(
+            [
+                "riscv32-unknown-elf-gcc",
+                "-march=rv32i",
+                "-mabi=ilp32",
+                "-T", f"{lib.WORKSPACE_FOLDER}/data/gcc/linker.ld",
+                "-e", "_start",
+                "-S",
+                "-ffreestanding",
+                "-fno-inline",
+                "-fno-builtin",
+                "-fno-function-cse",
+                str(c_file),
+                "-o",
+                str(asm_output),
+            ],
+            check=True,
+        )
+
+
+        # Agora vamos modificar o arquivo .s gerado para adicionar os 'nop' no começo
+        # e 'ecall' no final.
+        with open(asm_output, 'r') as f:
+            asm_code = f.readlines()
+        
+        # Adicionar os 'nop' no início da função main ou no começo do código
+        # Encontre a posição de onde começa a função main (geralmente é onde aparece 'main:')
+        main_start_idx = None
+        for idx, line in enumerate(asm_code):
+            if "main:" in line:
+                main_start_idx = idx
+                break
+        
+        if main_start_idx is not None:
+            # Inserir 3 NOPs no começo da função main
+            asm_code.insert(main_start_idx, "    nop\n    nop\n    nop\n")
+        
+        # Adicionar o 'ecall' no final da função (antes do 'ret' ou onde for o final do código principal)
+        for idx, line in enumerate(reversed(asm_code)):
+            if "ret" in line:
+                # Encontrou o 'ret', agora vamos adicionar o ecall antes dele
+                asm_code.insert(len(asm_code) - idx, "    ecall\n")
+                break
+
+        # Reescrever o arquivo .s com as modificações
+        with open(asm_output, 'w') as f:
+            f.writelines(asm_code)
+        
+        return asm_output
+
 
     @staticmethod
     def _get_program_dump(bins_file: Path):
