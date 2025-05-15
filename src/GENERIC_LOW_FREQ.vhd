@@ -29,7 +29,7 @@ begin
     process(clock)
     begin
         if rising_edge(clock) then
-            if counter = n then
+            if counter >= n then
                 counter <= 0;
                 tick <= not tick;
             else
