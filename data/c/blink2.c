@@ -1,27 +1,12 @@
-#include "base.h"
-
 void main() {
-
-    while (1) {
-        sleep(500000000);
-        digitalWrite(LEDR, 1);
-        sleep(500000000);
-        digitalWrite(LEDR, 0);
-        sleep(500000000);
-        digitalWrite(LEDR, 1);
-        sleep(500000000);
-        digitalWrite(LEDR, 0);
-        sleep(500000000);
-        digitalWrite(LEDR, 1);
-        sleep(500000000);
-        digitalWrite(LEDR, 0);
-        sleep(50000000000);
-        digitalWrite(LEDR, 1);
-        sleep(50000000000);
-        digitalWrite(LEDR, 0);
-        sleep(500000000);
-        digitalWrite(LEDR, 1);
-        sleep(500000000);
-        digitalWrite(LEDR, 0);
+    (*((volatile int *)128) = 1)
+    volatile int i = 0;
+    while (i<4999999){
+        i++;
+    }
+    (*((volatile int *)128) = 0)
+    i = 0;
+    while (i<4999999){
+        i++;
     }
 }

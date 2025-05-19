@@ -1,4 +1,4 @@
-	.file	"blink.c"
+	.file	"blink3.c"
 	.option nopic
 	.attribute arch, "rv32i2p1"
 	.attribute unaligned_access, 0
@@ -11,34 +11,29 @@
     nop
     nop
 main:
-	j	.L6
+	addi	sp,sp,-16
+	li	a5,1
+	sw	a5,128(zero)
+	sw	zero,12(sp)
+	j	.L2
 .L3:
- #APP
-# 7 "data/c/blink.c" 1
-	nop
-# 0 "" 2
- #NO_APP
+	lw	a5,12(sp)
 	addi	a5,a5,1
-.L2:
-	li	a4,99
-	ble	a5,a4,.L3
+	sw	a5,12(sp)
 	sw	zero,128(zero)
-	li	a5,0
-	j	.L4
-.L5:
- #APP
-# 13 "data/c/blink.c" 1
-	nop
-# 0 "" 2
- #NO_APP
-	addi	a5,a5,1
-.L4:
-	li	a4,99
-	ble	a5,a4,.L5
+.L2:
+	lw	a4,12(sp)
+	li	a5,150
+	bgt	a4,a5,.L6
+	lw	a4,12(sp)
+	li	a5,129
+	ble	a4,a5,.L3
+	sw	zero,128(zero)
+	j	.L3
 .L6:
 	li	a5,1
 	sw	a5,128(zero)
-	li	a5,0
-	j	.L2
+	addi	sp,sp,16
+	jr	ra
 	.size	main, .-main
 	.ident	"GCC: () 13.2.0"

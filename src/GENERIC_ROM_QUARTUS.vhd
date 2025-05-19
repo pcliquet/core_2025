@@ -51,7 +51,7 @@ entity GENERIC_ROM is
         --! Largura do vetore de endereço
         ADDRESS_WIDTH     : natural := 8;
         --! Largura do vetor de endereço mapeado na memória
-        ADDRESSABLE_WIDTH : natural := 7;
+        ADDRESSABLE_WIDTH : natural := 10;
         --! Arquivo .mif de inicialização da memória
         INIT_FILE         : string  := "/home/pcliquet/Documents/TCC/core_2025/data/mif/blink.mif"
     );

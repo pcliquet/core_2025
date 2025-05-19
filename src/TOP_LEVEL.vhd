@@ -13,9 +13,9 @@
 		 );
 
 		 port (
-			  CLOCK           : in  std_logic                    := '0';
-			  --SW            : in  std_logic_vector(3 downto 0) := (others => '0');
-			  LEDR            : out std_logic_vector(9 downto 0) := (others => '0')
+			  CLOCK           : in  std_logic                    ;--:= '0';
+			  SW            : in  std_logic_vector(3 downto 0); --:= (others => '0');
+			  LEDR            : out std_logic_vector(9 downto 0) --:= (others => '0')
 		 );
 
 	end entity;
@@ -29,7 +29,7 @@
 		 signal enable_memory_write : std_logic;
 		 signal address_program     : WORK.RV32I.t_DATA;
 		 signal address_memory      : WORK.RV32I.t_DATA;
-		 signal clock_processor     : std_logic := '0';
+		 signal clock_processor     : std_logic := '1';
 
 	begin
 
@@ -90,12 +90,15 @@
 					destination  => LEDR(0 downto 0)
 			  );
 
+			  
+			  
 		 CLOCK_DEMONSTRATION : if DEMONSTRATION = TRUE generate
 			  low_freq : entity WORK.GENERIC_LOW_FREQ
-					generic map (n => 100000)
+					generic map (n => 20000000)
 					port map (
 						 clock => CLOCK,
-						 clock_out => clock_processor
+						 clock_out => clock_processor,
+						 div_selector => SW(2 downto 0)
 					);
 					LEDR(9) <= clock_processor;
 					else generate
