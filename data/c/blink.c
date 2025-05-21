@@ -1,17 +1,2896 @@
 int main() {
-    while (1) {
-        // Liga LED
-        (*((volatile unsigned int *)128) = 1);
+  
+    // Liga LED
+    (*((volatile unsigned int *)128) = 0);
 
-        // Sleep
-        for (int i = 0; i < 100; i++) asm("nop");
-
-        // Desliga LED
-        (*((volatile unsigned int *)128) = 0);
-        
-        // Sleep
-        for (int i = 0; i < 100; i++) asm("nop");
+    // Sleep
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
     }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       // Sleep
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    (*((volatile unsigned int *)128) = 1);
+    
+       // Sleep
+          // Sleep
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+        for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    for (int i = 1200000000; i >  0; i--){
+    asm("nop");
+    asm("nop");
+    asm("nop");
+    }
+       for (int i = 1200000000; i >  0; i--){
+        asm("nop");
+        asm("nop");
+        asm("nop");
+    }
+    (*((volatile unsigned int *)128) = 0);
+
 
     return 0;
 }
