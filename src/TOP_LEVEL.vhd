@@ -7,7 +7,7 @@
 	entity TOP_LEVEL is
 
 		 generic (
-			  PROGRAM_FILE   : string := "/home/pcliquet/Documents/TCC/core_2025/data/mif/blink.mif";
+			  PROGRAM_FILE   : string := "D:\PFE\core_2025\data\c\blink.mif";
 			DEMONSTRATION  : boolean := TRUE;
 			QUARTUS_MEMORY : boolean := FALSE
 		 );
@@ -37,7 +37,7 @@
 			  generic map (
 					DATA_WIDTH    => WORK.RV32I.XLEN,
 					ADDRESS_WIDTH => WORK.RV32I.XLEN,
-					ADDRESSABLE_WIDTH => 10,
+					ADDRESSABLE_WIDTH => 15,
 					INIT_FILE     => PROGRAM_FILE
 			  )
 			  port map (
