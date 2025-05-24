@@ -48,6 +48,8 @@ ENV PATH=${OSS_CAD_SUITE_PATH}/bin/:${OSS_CAD_SUITE_PATH}/py3bin/:$PATH
 ENV PATH=${GNU_TOOLCHAIN_PATH}/bin/:$PATH
 ENV PATH=${DENO_PATH}/bin/:$PATH
 
+ENV PYTHONPATH=/root/
+
 ADD $OSS_CAD_SUITE_URL  /tmp/oss-cad-suite.tgz
 ADD $GNU_TOOLCHAIN_URL  /tmp/gnu-toolchain.tar.gz
 ADD $DENO_URL           /tmp/deno.zip
@@ -66,13 +68,24 @@ RUN apt-get update -qq                                  \
         unzip                                           \
         xxd                                             \
         zlib1g-dev                                      \
+        curl                                            \
+        ca-certificates                                 \
+        gnupg                                           \
+        lsb-release                                     \
     && apt-get autoclean                                \
     && apt-get clean                                    \
     && apt-get autoremove -y                            \
     && rm -r /var/lib/apt/lists/*                       \
     && locale-gen en_US.UTF-8                           \
     && update-locale LANG=en_US.UTF-8                   \
-    && echo 'export PS1="'$PS1_FORMAT'"' >> ~/.bashrc
+    && echo 'export PS1="'$PS1_FORMAT'"' >> ~/.bashrc \
+    # Install Node.js (LTS) and npm for netlistsvg      \
+    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get update -qq                              \
+    && apt-get install -y nodejs                       \
+    # Install netlistsvg globally                       \
+    && npm install -g netlistsvg                       \
+    && npm cache clean --force
 
 RUN mkdir $OSS_CAD_SUITE_PATH $GNU_TOOLCHAIN_PATH $DENO_PATH        \
     && tar -xzf /tmp/oss-cad-suite.tgz  -C /opt/                    \
