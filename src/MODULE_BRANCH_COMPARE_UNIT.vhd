@@ -72,7 +72,7 @@ begin
             source_2      => forward_source_2,
             flag_equal    => flag_equal,
             flag_less     => flag_less,
-            flag_greather => flag_greather
+            flag_greater => flag_greather
         );
 
     CONTROLLER: entity WORK.RV32I_BRANCH_CONTROLLER
