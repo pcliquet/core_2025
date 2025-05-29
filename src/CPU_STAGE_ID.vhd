@@ -152,7 +152,7 @@ begin
             destination => count_increment
         );
 
-        address_jump<=  address_btb when (hit = '1' and take_branch ='1') else
+        address_jump<=  address_btb when (hit = '1' and take_branch ='1' and signal_was_taken = '0') else
 								count_increment when (signal_was_taken = '1' and ((control_id.enable_jump OR enable_branch) ='0'))
 								else address_branch_comp;
 
