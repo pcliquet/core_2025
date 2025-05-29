@@ -2,7 +2,7 @@
 .globl _start
 _start:
     nop
-    addi x1, x2, 4          # x1 = 4
+    addi x1, x0, 4          # x1 = 4
     sw x1, 0(x1)            # store x1 (4) at memory address x1 (4)
     addi x2, x0, 4          # x2 = 4
     beq x2, x1, j_eq        # x2 == x1, so jump to j_eq
